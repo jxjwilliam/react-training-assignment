@@ -18,7 +18,7 @@ class AdminLogin extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({fireRedirect: true})
-    this.props.addAdminLoginUser({email:this.state.email})
+    this.props.addAdminLoginUser({email: this.state.email})
   }
 
   handleChange = e => {
@@ -36,7 +36,7 @@ class AdminLogin extends Component {
 
     return (
       <div className="text-center">
-        <h1>Admin Approval Panel {admin && admin.email ? `[ ${admin.email} ]`: ''}</h1>
+        <h1>Admin Panel {admin && admin.email ? `[ ${admin.email} ]` : ''}</h1>
         <form className="form-signin" onSubmit={this.handleSubmit} id="signin" name="signin"
               ref={el => this.form = el}>
           <label htmlFor="email1" className="sr-only">Email</label>
@@ -48,11 +48,6 @@ class AdminLogin extends Component {
           <input type="password" id="password" name="password" value={password} className="form-control"
                  placeholder="Password"
                  required="" onChange={this.handleChange}/>
-          <div className="checkbox mb-3">
-            <label>
-              <input type="checkbox" value="remember-me"/> Remember me
-            </label>
-          </div>
           <button className="btn btn-lg btn-primary btn-block" type="submit">Admin Login</button>
         </form>
       </div>

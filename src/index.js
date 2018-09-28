@@ -26,8 +26,6 @@ import RequestForm from './components/RequestForm'
 import Data from './etc/Data'
 
 import registerServiceWorker from './registerServiceWorker';
-const removeRequest = index => {
-};
 
 const App = () => (
     <Router>
@@ -46,7 +44,6 @@ const App = () => (
                        render={(routeProps) => (
                            <ListTable
                                requests={Data.requests}
-                               removeRequest={removeRequest}
                                isAdmin="true"
                                {...routeProps}
                            />

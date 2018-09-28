@@ -32,6 +32,7 @@ export const addGeneralLoginUser1 = payload => {
   };
 }
 
+/*eslint-disable no-unused-vars*/
 const fetchUserData = () => {
   return fetch('/api/onleave/userlogin', {
     method: 'POST',
@@ -63,6 +64,7 @@ const fetchAdminData = () => {
       throw new Error(e);
     })
 }
+/*eslint-enable no-unused-vars*/
 
 export const addAdminLoginUser1 = (payload) => (dispatch) => {
   fetch('/api/onleave/v1/addAdmin', {

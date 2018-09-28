@@ -13,7 +13,8 @@ const getGeneralInfo = (state = {}, action) => {
 const getAdminInfo = (state = {}, action) => {
   switch (action.type) {
     case 'SAVE_ADMIN_LOGIN_INFO':
-      state = {...state, ...action.payload}
+      state = {...state, ...action.payload};
+      return state;
     default:
       return state;
   }
